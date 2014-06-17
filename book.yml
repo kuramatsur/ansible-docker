@@ -1,0 +1,14 @@
+---
+- hosts: 127.0.0.1
+  user: k2
+
+  tasks:
+   - name: nano
+     yum: name=nano state=installed
+
+   - name: set yum repository for the epel
+     yum: name=http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+     notify: yum update
+
+   - name: docker
+     yum: name=docker-io
