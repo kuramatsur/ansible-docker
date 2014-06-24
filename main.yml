@@ -1,0 +1,12 @@
+---
+- hosts: 127.0.0.1
+  user: root
+
+  tasks:
+ 
+   - name: nano
+     yum: name=nano state=installed
+
+- include: docker.yml
+- include: java.yml
+- include: maven3.yml

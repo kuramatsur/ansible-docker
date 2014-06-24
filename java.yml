@@ -1,0 +1,13 @@
+---
+- hosts: 127.0.0.1
+  user: root
+
+  tasks:
+
+   - yum: name='curl' state=installed
+
+   - command: >
+            curl -LO 'http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.rpm' -H 'Cookie:oraclelicense=accept-securebackup-cookie'
+            creates=jdk-7u51-linux-x64.rpm
+
+   - yum: name=jdk-7u51-linux-x64.rpm state=present
