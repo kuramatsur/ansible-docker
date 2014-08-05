@@ -13,8 +13,8 @@
    - selinux: state=disabled
 
 
-
 - include: user.yml
+- include: dir.yml
 - include: docker.yml
 - include: java.yml
 - include: maven3.yml
