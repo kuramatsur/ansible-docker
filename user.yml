@@ -1,0 +1,9 @@
+---
+- hosts: 127.0.0.1
+  user: root
+
+  tasks:
+   - group: name=app gid=600
+   - user: name=tomcat2 group=app groups=app
+
+
