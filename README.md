@@ -1,3 +1,6 @@
+#first: install git
+yum install git -y
+
 #install ansible
 yum-ansible.sh
 
