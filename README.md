@@ -1,6 +1,11 @@
-  yum-ansible.sh
-  ansible-playbook main.yml -i localhost
-  docker run -d xxx
+#install ansible
+yum-ansible.sh
+
+# do ansible
+ansible-playbook main.yml -i localhost
+
+#etc...
+docker run -d xxx
 
 
 
