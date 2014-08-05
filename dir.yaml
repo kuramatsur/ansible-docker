@@ -1,0 +1,7 @@
+---
+- hosts: 127.0.0.1
+  user: root
+
+  tasks:
+   - file: path=/fudeweb/bin owner=tomcat group=app mode=0664 recurse=yes state=directory
+
