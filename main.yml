@@ -18,3 +18,4 @@
 - include: docker.yml
 - include: java.yml
 - include: maven3.yml
+- include: monit.yml
