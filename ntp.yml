@@ -8,8 +8,13 @@
      yum: pkg=ntp state=installed
      tags: ntp
 
+   - stat: path=/etc/ntp.conf
+     register: st
+     tags: ntp
+
    - name: be sure ntp is configured
      template: src=ntp.conf.j2 dest=/etc/ntp.conf
+     when: not st.stat.exists
      notify:
       - name: restart ntpd
         service: name=ntpd state=restarted
