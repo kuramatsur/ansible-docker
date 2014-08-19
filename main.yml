@@ -12,7 +12,7 @@
 
    - selinux: state=disabled
 
-
+- include: ntp.yml
 - include: user.yml
 - include: dir.yml
 - include: docker.yml
