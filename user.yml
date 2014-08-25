@@ -4,6 +4,6 @@
 
   tasks:
    - group: name=app gid=600
-   - user: name=tomcat group=app groups=app
+   - user: name=tomcat group=app groups=app uid=600
 
 
