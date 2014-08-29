@@ -12,6 +12,9 @@
 
    - selinux: state=disabled
 
+   - name: timezone
+     copy: src=/usr/share/zoneinfo/Japan dest=/etc/localtime force=yes
+
 - include: ntp.yml
 - include: user.yml
 - include: dir.yml

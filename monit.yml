@@ -4,5 +4,5 @@
 
   tasks:
 
-   - yum: name='monit' state=installed
+   - yum: name='http://pkgs.repoforge.org/monit/monit-5.5-1.el6.rf.x86_64.rpm' state=installed
 
